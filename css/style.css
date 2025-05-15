@@ -1,0 +1,254 @@
+/*--------------------------------------------------------------
+  Base Styles (Mobile-First)
+--------------------------------------------------------------*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #333;
+}
+
+a {
+  color: #0077cc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover,
+a:focus {
+  color: #005fa3;
+}
+
+/*--------------------------------------------------------------
+  Navigation Container with Rounded Corners
+--------------------------------------------------------------*/
+
+header {
+  background: #333;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+nav {
+  background: #444;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 800px;
+  width: 100%;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  flex: 1;
+}
+nav a {
+  display: block;
+  padding: 1rem;
+  text-align: center;
+  color: #fff;
+}
+nav a.active,
+nav a:hover {
+  background: #555;
+}
+
+/*--------------------------------------------------------------
+  Utility Classes for Layout
+--------------------------------------------------------------*/
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/*--------------------------------------------------------------
+  Image Styles (Merged & Animated)
+--------------------------------------------------------------*/
+
+/* Responsive, rounded corners, shadow, and hover effect */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover,
+img:focus {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Fade-in and slide-in animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-in {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+.slide-in {
+  animation: slideIn 0.8s ease forwards;
+}
+
+/* Optional delay utility classes */
+.delay-1 { animation-delay: 0.3s; }
+.delay-2 { animation-delay: 0.6s; }
+
+/*--------------------------------------------------------------
+  Hero Section (Home)
+--------------------------------------------------------------*/
+
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: #e9f4ff;
+  margin-bottom: 2rem;
+}
+.hero h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+}
+.hero p {
+  font-size: 1.2rem;
+}
+
+/*--------------------------------------------------------------
+  Post List (Home)
+--------------------------------------------------------------*/
+
+.post-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+.post-list article {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+.post-list article:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+.post-list img {
+  margin-bottom: 1rem;
+}
+
+/*--------------------------------------------------------------
+  About Section
+--------------------------------------------------------------*/
+
+.about-section,
+.mission {
+  background: #fff;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.about-section h1,
+.mission h2 {
+  margin-top: 0;
+}
+
+/*--------------------------------------------------------------
+  Contact Form
+--------------------------------------------------------------*/
+
+.contact-form {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+.contact-form form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+.contact-form label {
+  font-weight: bold;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #0077cc;
+  box-shadow: 0 0 0 3px rgba(0, 119, 204, 0.2);
+}
+.contact-form button {
+  padding: 0.75rem;
+  border: none;
+  background: #0077cc;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.contact-form button:hover,
+.contact-form button:focus {
+  background: #005fa3;
+  transform: translateY(-2px);
+}
+
+/*--------------------------------------------------------------
+  Footer
+--------------------------------------------------------------*/
+
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background: #333;
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
+  Media Queries
+--------------------------------------------------------------*/
+
+/* Tablet (≥768px) */
+@media (min-width: 768px) {
+  .post-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contact-form form {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Desktop (≥1024px) */
+@media (min-width: 1024px) {
+  .post-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .hero {
+    padding: 6rem 1rem;
+  }
+}
