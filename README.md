@@ -33,7 +33,7 @@ TechTide is a beginner-friendly blog platform created to demonstrate modern web 
 
 1. **Clone the repository**  
    ```bash
-   git clone https://github.com/Vicks-aj/blog-project
+   git clone https://github.com/Vicks-aj/blog-project.git
    cd blog-project
 2. Open locally
 
