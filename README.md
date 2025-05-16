@@ -4,7 +4,7 @@
 
 ## 🚀 Live Demo
 
-🌐 https://<your-username>.github.io/TechTideBlog/  
+🌐  https://vicks-aj.github.io/blog-project/ 
 
 ## 📖 Table of Contents
 
